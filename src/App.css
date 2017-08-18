@@ -1,0 +1,263 @@
+body{
+	background-color: #efefef;
+	padding: 10px;
+	overflow-x: hidden;
+}
+.firstRow svg {
+	width:95%;
+	height:80px;
+}
+.firstRow > div {
+	width: 100%;
+}
+.txtrt{
+	text-align: right;
+}
+.countText{
+   font-size: 30px;
+   color: #6c6c6c;
+   font-weight: 100;
+   font-family: roboto;
+}
+.cnt-title{
+	font-size: 1.5em;
+	font-family: verdana;
+	color:black;
+}
+.pad5{
+	padding: 5px;
+}
+.card{
+	box-shadow: 2px 2px 2px #666;
+	cursor: pointer;
+}
+.chartIndicator{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	padding: 3px;
+}
+.vmid{
+	vertical-align: middle !important;
+}
+.legend{
+	display: inline-flex;
+	text-align: right;
+	font-size: 13px;
+}
+.legend > div {
+	margin-right:5px;
+}
+.mapCol {
+	padding: 2em 1em;
+}
+.mapCol > div {
+	border: 2px solid #ffffff;
+	box-shadow: 2px 2px 5px #ccc;
+}
+.firstRow{
+	margin-bottom: 1em;
+}
+
+/*Media Queries */
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) {
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) { 
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px)  { 
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px)  {
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px)  {
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+   .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+
+/* ----------- HTC One ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px)  {
+  .mapCol, .mapCol > div {
+	height: 350px;
+  }
+  .pieChartCol{
+  	margin-top: 1em;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+    margin: 0.5em 0;
+ }
+}
+
+/*------------ Tablet -------------*/
+@media screen 
+  and (min-device-width: 760px) { 
+  .mapCol, .mapCol > div {
+	height: 450px;
+  }
+  .card {
+    box-shadow: 2px 2px 2px #666;
+    cursor: pointer;
+  }
+}
+@media screen 
+  and (min-device-width: 760px) 
+  and (max-device-width: 1000px){ 
+	.cnt-title{
+		font-size: 1em;
+		font-family: verdana;
+		color:black;
+	}
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px)  { 
+  .mapCol, .mapCol > div {
+	height: 450px;
+  }
+}
+@media screen 
+  and (min-device-width: 1000px) { 
+  .mapCol, .mapCol > div {
+	height: 450px;
+  }
+}
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px)  {
+  .mapCol, .mapCol > div {
+	height: 450px;
+  } 
+}
+@media screen 
+  and (min-device-width: 1200px) {
+  .mapCol, .mapCol > div {
+	height: 450px;
+  } 
+}

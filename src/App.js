@@ -6,32 +6,13 @@ import UniqueVisitors from './components/unique_visitors';
 import BounceRate from './components/bounce_rate';
 import PieComponent from './components/piechart.js';
 import GoogleMap from './components/google_map';
-// import dragula from 'react-dragula';
-// import Sortable from './components/sortable';
-// import { SortablePane, Pane } from 'react-sortable-pane';
-
-
-
+import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
 class App extends Component {
-  // componentDidMount(){
-  //   let container = ReactDOM.findDOMNode(this.refs.row1);
-  //   dragula([container]);
-  // }
-  render() {
-    return (
-      <div>
-        <div className="row firstRow" ref="row1">
-          <div className="col-md-4">
-              <Visitors />
-          </div>
-          <div className="col-md-4">
-              <UniqueVisitors />
-          </div>
-          <div className="col-md-4">
-              <BounceRate />
-          </div>
-        </div>
-        <div className="row" ref="row2">
+  render(){
+    return(
+        <div>
+          <SortableComponent />
+          <div className="row" >
           <div className="col-md-7 mapCol">
               <GoogleMap />
           </div>
@@ -39,8 +20,38 @@ class App extends Component {
             <PieComponent />
           </div>
         </div>
-      </div>
-    );
+        </div>
+      );
+  }
+}
+
+const SortableItem = SortableElement(({value}) =>
+  <div className="col-md-4">
+  {value}
+  </div>
+);
+
+const SortableList = SortableContainer(({items}) => {
+  return (
+    <div className="row firstRow">
+      {items.map((value, index) => (
+        <SortableItem key={`item-${index}`} index={index} value={value} />
+      ))}
+    </div>
+  );
+});
+
+class SortableComponent extends Component {
+  state = {
+    items: [ <Visitors />, <UniqueVisitors />, <BounceRate /> ],
+  };
+  onSortEnd = ({oldIndex, newIndex}) => {
+    this.setState({
+      items: arrayMove(this.state.items, oldIndex, newIndex),
+    });
+  };
+  render() {
+    return <SortableList items={this.state.items} onSortEnd={this.onSortEnd} axis="xy"/>;
   }
 }
 
